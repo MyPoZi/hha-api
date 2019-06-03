@@ -17,12 +17,7 @@ class CreateItemsTable extends Migration
             $table->bigIncrements('id');
             $table->string("name", 100);
             $table->integer("value");
-            $table->string("user_name", 100);
-            $table->unsignedInteger('tag_id');
             $table->timestamps();
-            $table->foreign('tag_id')
-                ->references('id')->on('tags')
-                ->onDelete('cascade');
         });
     }
 
