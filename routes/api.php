@@ -16,3 +16,8 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::Get('/item', 'ItemController@index');
+Route::Post('/item', 'ItemController@store');
+Route::Patch('/item', 'ItemController@update');
+Route::Delete('/item', 'ItemController@destroy');
+
